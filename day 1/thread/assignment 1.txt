@@ -1,0 +1,15 @@
+package javafirst;
+
+
+
+public class threadnaming extends Thread{
+		 public static void main(String args[]){  
+			 threadnaming t1=new threadnaming();  
+			 threadnaming t2=new threadnaming();   
+		  t1.setName("Scooby");
+		  t2.setName("Shaggy");
+		  System.out.println("Name of t1:"+t1.getName());  
+		  System.out.println("Name of t2:"+t2.getName()); 
+		 }  
+		}  
+	
