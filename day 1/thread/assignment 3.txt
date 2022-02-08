@@ -1,0 +1,50 @@
+class one implements Runnable{
+	public void run() {
+		try {
+			for(int i=1;i<=20;i++) {
+				if(i%2==0) {
+					System.out.println(i);
+					}
+				}
+		   }
+		   catch(Exception e) {
+			   e.printStackTrace();
+		   }
+		
+	}
+}
+
+class three implements Runnable{
+	public void run() {
+		try {
+			for(int i=1;i<=20;i++) {
+				if(i%2==1) {
+					System.out.println(i);
+					}
+				}
+		   }
+		   catch(Exception e) {
+			   e.printStackTrace();
+		   }
+		
+	}
+}
+
+public class thread3 {
+	public static void main(String[] args) {
+		one t1=new one();
+		Thread thread=new Thread(t1);
+		t1.start();
+		try {
+			t1.join();
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		three t2=new three();
+		Thread thread1=new Thread(t2);
+		t2.start();
+		
+	}
+
+}
