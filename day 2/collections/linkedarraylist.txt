@@ -1,0 +1,51 @@
+package javafirst;
+
+import java.util.LinkedList;
+
+public class LinkedListArray {
+	private LinkedList<Integer> list = new LinkedList<Integer>();
+
+	public LinkedList<Integer> saveEvenNumbers(int N) {
+		list = new LinkedList<Integer>();
+
+		for (int i = 2; i <= N; i++) {
+			if (i % 2 == 0) list.add(i);
+		}
+
+		return list;
+	}
+
+	public LinkedList<Integer> printEvenNumbers() {
+		LinkedList<Integer> newList = new LinkedList<Integer>();
+
+		for (int item : list) {
+			newList.add(item * 2);
+			System.out.println(item * 2);
+		}
+
+		return newList;
+	}
+
+	public Integer printEvenNumber(int N) {
+
+		for (int item : list) {
+			if(item==N) {
+				return N;
+			}
+		}
+
+		return 0;
+	}
+
+
+	public static void main(String[] args) {
+		LinkedListArray e = new LinkedListArray();
+		e.saveEvenNumbers(10);
+		e.printEvenNumbers();
+		int result = e.printEvenNumber(8);
+		System.out.println("The number is: " + result);
+
+
+	}
+
+}
