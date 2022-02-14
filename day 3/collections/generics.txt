@@ -1,0 +1,13 @@
+package javafirst;
+import java.util.ArrayList;
+public class deque {
+	public static void main(String ar[]) {
+            	ArrayList<String> k = new ArrayList(); // raw type
+
+		k.add("12"); 
+		k.add("45.6"); 
+		k.add("ram"); 
+	}
+
+
+}
