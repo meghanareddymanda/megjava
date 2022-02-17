@@ -1,0 +1,41 @@
+package collections;
+
+import java.util.TreeSet;
+
+public class TreeSetDemo {
+
+	static TreeSet<String> t1 = new TreeSet<>();
+
+    
+    public TreeSet<String> reverse(){
+
+       
+        TreeSet<String> t2 = new TreeSet<>();
+
+        
+        for(String n:t1)
+            t2.add(n);
+
+        return t2;
+    }
+
+    
+    public void iterateTree(){
+
+        for(String s:t1)
+            System.out.println(s);
+
+    }
+
+    
+    public String checkTree(String s){
+
+        for(String a:t1)
+            if(s==a)
+                return s;
+
+        return "not found";
+    }
+
+
+	}
