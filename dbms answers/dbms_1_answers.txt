@@ -1,0 +1,23 @@
+1.CREATE TABLE countries( 
+COUNTRY_ID varchar(2),
+COUNTRY_NAME varchar(40),
+REGION_ID decimal(10,0)
+);
+
+2.CREATE TABLE IF NOT EXISTS countries (
+COUNTRY_ID varchar(2),
+COUNTRY_NAME varchar(40) ,
+REGION_ID decimal(10,0)
+);
+
+3.CREATE TABLE IF NOT EXISTS dup_countries
+ LIKE countries;
+
+4.CREATE TABLE IF NOT EXISTS dup_countries
+AS SELECT * FROM  countries;
+
+5.CREATE TABLE IF NOT EXISTS countries ( 
+COUNTRY_ID varchar(2) NOT NULL,
+COUNTRY_NAME varchar(40) NOT NULL,
+REGION_ID decimal(10,0) NOT NULL
+);
