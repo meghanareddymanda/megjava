@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="ecommerce.com.Product" table="product">
+
+		<id name="id" type="int" column="id">
+			<generator class="sequence"></generator>
+		</id>
+
+		<property name="laptopName" column="laptop_name"
+			type="string"></property>
+		<property name="model" column="model" type="string"></property>
+		<property name="screensize" column="screensize" type="string"></property>
+		<property name="color" column="color" type="string"></property>
+		<property name="weight" column="weight" type="string"></property>
+	</class>
+</hibernate-mapping>
